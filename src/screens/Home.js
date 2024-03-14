@@ -1,10 +1,13 @@
-import { View, } from "react-native";
+import { View, ScrollView } from "react-native";
 import Header from "../componentes/Header";
 import Stories from "../componentes/Stories";
+import Post from "../componentes/Post";
+import Fake from "../assets/eu.jpg";
+import postImage from "../assets/post-example.png";
 
 export default function Home() {
     return (
-        <View
+        <ScrollView
             style={{
                 flex: 1,
                 marginVertical: 32,
@@ -13,6 +16,30 @@ export default function Home() {
         >
             <Header />
             <Stories />
-        </View >
+
+            <Post
+            profileImage={Fake}
+            postImage={postImage}
+            profileName="Nicolly Neves"
+            description="It is a long established fact that a reader will be distracted by the readable content of a page when looking"
+            />
+
+            <Post
+            profileImage={Fake}
+            postImage={postImage}
+            profileName="Nicolly Neves"
+            description="It is a long established fact that a reader will be distracted by the readable content of a page when looking"
+            />
+
+            <Post
+            profileImage={Fake}
+            postImage={postImage}
+            profileName="Nicolly Neves"
+            description="It is a long established fact that a reader will be distracted by the readable content of a page when looking"
+            />
+
+
+                
+        </ScrollView >
     );
 }
